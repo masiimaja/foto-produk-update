@@ -1,41 +1,45 @@
-name: Build Android APK
+name: Build APK Foto Produk Update
 
 on:
-  workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout source
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Java
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: "17"
+          java-version: '17'
 
-      - name: Set up Flutter
+      - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: stable
           cache: true
 
-      - name: Generate Android platform project
+      - name: Generate Android project
         run: flutter create --platforms=android --org id.fotoprodukupdate .
 
-      - name: Resolve packages
+      - name: Install dependencies
         run: flutter pub get
 
-      - name: Build release APK
+      - name: Build APK
         run: flutter build apk --release
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: foto-produk-update-android-apk
+          name: Foto-Produk-Update-APK
           path: build/app/outputs/flutter-apk/app-release.apk
-          if-no-files-found: error
