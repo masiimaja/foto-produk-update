@@ -40,3 +40,4 @@ Paket ini berisi kode sumber Flutter dan alur otomatis untuk membangun APK Andro
 ## Identitas aplikasi
 Nama: Foto Produk Update
 Package ID awal: `id.fotoprodukupdate.foto_produk_update` (dihasilkan Flutter dari org dan nama proyek).
+Memulai proses build APK Foto Produk Update
