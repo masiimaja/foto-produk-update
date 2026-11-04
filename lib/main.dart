@@ -155,7 +155,7 @@ class _StudioPageState extends State<StudioPage> {
               gradient: const LinearGradient(colors: [Color(0xFF30205E), Color(0xFF7957E8)]),
               borderRadius: BorderRadius.circular(22),
             ),
-            child: const Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Row(children: [
                 ClipRRect(borderRadius: BorderRadius.circular(10), child: Image.asset('assets/logo_foto_produk_update.png', width: 54, height: 54, fit: BoxFit.cover)),
                 const SizedBox(width: 10),
