@@ -235,7 +235,7 @@ class _StudioPageState extends State<StudioPage> {
             Container(
               padding: const EdgeInsets.all(24),
               decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(18)),
-              child: const Column(children: [
+              child: Column(children: [
                 Icon(Icons.image_search_outlined, size: 42, color: Color(0xFF9B91BC)),
                 SizedBox(height: 8),
                 Text('Foto produk akan tampil di sini', style: TextStyle(fontWeight: FontWeight.w600)),
